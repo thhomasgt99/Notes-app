@@ -1,0 +1,14 @@
+{{#if success_msg }} {{!--condicional para evaluar si existen mensajes, si existen pintarlos--}}
+<div class="alert alert-success alert-dismissible fade show justify-content-between d-flex" role="alert"> {{!--role esta relacionado con boostrap y
+	algunas de estas clases y el buttton --}}
+	{{success_msg}}
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button> {{!--data-dismiss este alparecer se conecta con el role de el div, area-label es algo de que por sin se renderiza --}}
+</div>
+{{/if}}
+
+{{#if error_msg }}
+<div class="alert alert-warning alert-dismissible fade show justify-content-between d-flex" role="alert">
+	{{error_msg}}
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button> 
+</div>
+{{/if}}

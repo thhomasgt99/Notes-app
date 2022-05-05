@@ -1,0 +1,13 @@
+{{#if error}}
+	<div class="alert alert-warning alert-dismissible fade show justify-content-between d-flex" role="alert">
+		{{error}}  
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button> 
+	</div>
+{{/if}}
+
+{{#each errors}}  {{!--esto es para recorrer la lista 'errors' que camptura al intentar crear una cuenata--}}
+	<div class="alert alert-warning alert-dismissible fade show justify-content-between d-flex" role="alert"> {{!--role esta relacionado con boostrap y algunas de estas clases y el buttton --}}
+		{{text}}  {{!--esto text biene  o es una propiedad del error o errores que vengan solo que se pone solo por cuestion de esta sintax--}}
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button> {{!--data-dismiss este alparecer se conecta con el role de el div, area-label es algo de que por sin se renderiza --}}
+	</div>
+{{/each}}	

@@ -1,0 +1,22 @@
+<div class="row">
+	{{#each notes}} 					       {{!--sintax del handlebars en este caso este sera un bucle --}}
+	<div class="col-md-3">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title d-flex justify-content-between align-items-center">  {{!--gracias a handlebars podemos escribir esto asi, es igual a: notes.title --}}
+					{{title}} 
+					<a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>	{{!--estas clases son de font awesome --}}
+				</h4> 				 
+				<p>{{description}}</p>
+				<form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">  {{!--Este formulario es solo para pder utilizar el boton con metodos de http --}}
+																																						{{!--?_method=DELETE esta sera la consulta que estara esperando method-override en el sevidor para reemplazar post por delete--}}
+					<input type="hidden" name="_method" value="DELETE">{{!--este input se pone obligatoriamente pq lo nesesita method-overide, se pone en hidden pq tiene que ser invisible--}}
+					<button class="btn btn-danger btn-block btn-sm" type="submit"> {{!--type="submit ejecuta el formulario  y method espara indicarle que metodo de http va a utilizar--}}
+						Delete
+					</button> 	
+				</form>	
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>

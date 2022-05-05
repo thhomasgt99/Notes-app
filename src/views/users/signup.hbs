@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-md-4 mx-auto">
+		<div class="card">
+			<div class="card-header">
+				Accout Register
+			</div>
+			<div class="card-body">
+				<form action="/users/signup" method="POST">
+					<div class="form-group">
+						<input type="text"class="form-control" name="name" placeholder="Name" value="{{name}}"> {{!--los names son para nobrar el dato que llegue por el input, y con name seran reconocindos esos datos desde el cervidor--}}
+					</div>
+					<div class="form-group">
+						<input type="email"class="form-control" name="email" placeholder="Email" value="{{email}}">  {{!--ESTOS VALUES DE LOS INPUTS ESQUE EL BACKEND VA A TOMAR LO QUE EL USUARIO HALLA TIPEADO Y SE SE EQUIVOCA PUES SE LA DA DENUEVO --}}
+					</div>
+					<div class="form-group">
+						<input type="password"class="form-control" name="password" placeholder="Password" value="{{password}}"> {{!--parece ser que la diferencia entre los values y los names es que los names toman el dato del input y los values le meten o le traen un dato al input--}}
+					</div>
+					<div class="form-group">
+						<input type="password"class="form-control" name="confirm_password" placeholder="Confir Password" value="{{confirm_password}}">
+					</div>
+
+					<button class="btn btn-primary btn-block">
+						Singup
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
